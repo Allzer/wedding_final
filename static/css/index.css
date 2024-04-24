@@ -1,7 +1,23 @@
-body { 
-    background: #F1F9F6;
+@font-face {
+	font-family: 'Rosarium';
+	src: url('../fonts/rosarium.ttf'); /* IE 9 Compatibility Mode */
+}
+
+body{
+    background-color: #d9eee8;
 }
 
 .preview{
-    font-family: 'Hando Soft Trial Regular';
+	background-color: rgb(189, 228, 213);
+    font-family: 'Rosarium';
+	font-size: 250%;
+
+	padding-left: 3%;
+	padding-top: 3.5%;
+
+	margin-left: -2%;
+	margin-top: -4%;
+	margin-right: -2%;
+
+
 }
