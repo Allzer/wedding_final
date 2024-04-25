@@ -4,8 +4,12 @@ from flask_migrate import Migrate
 from config import SECRET_KEY, DATABASE_URL
 from database import db
 
+from src.Register.register import reg
+
 app = Flask(__name__)
 app.secret_key = SECRET_KEY
+
+app.register_blueprint(reg, url_prefix='/registrations')
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL

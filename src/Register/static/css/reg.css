@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'Rosarium';
+	src: url('../fonts/rosarium.ttf'); /* IE 9 Compatibility Mode */
+}
+
+body{
+    background-color: #d9eee8;
+}
+
+
+.reg{
+    font-family: 'Rosarium';
+	font-size: 250%;
+	background-color: rgb(189, 228, 213);
+
+	position: absolute;
+
+	display: flex;
+
+	margin-top: 14%;
+	margin-left: 18%;
+
+	padding: 2.5%;
+
+	border-radius: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% block head%}
     <link type="text/css" href="{{ url_for('static', filename='css/index.css')}}" rel="stylesheet" />
-    <link type="text/css" href="{{ url_for('static', filename='css/tasks.css')}}" rel="stylesheet" />
+{% endblock%}
+    
 
     {% block title %}
         <title class="title">{{title}}</title>
     {% endblock -%}
-</head>
 
 <body>
     <div>
