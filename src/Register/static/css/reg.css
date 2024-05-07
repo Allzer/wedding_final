@@ -1,69 +1,31 @@
-@font-face {
-	font-family: 'Rosarium';
-	src: url('../fonts/rosarium.ttf'); /* IE 9 Compatibility Mode */
+.reg {
+    font-family: 'Rosarium';
+    font-size: 250%;
+    background-color: rgb(189, 228, 213);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12%;
+    border-radius: 10px;
 }
 
-body{
+.container {
+    width: 50%;
+    text-align: center;
+}
+
+.form-reg {
+    margin-top: 5%;
+}
+
+.form {
+    margin: 3%;
+}
+
+input {
+    border-color: none;
+}
+
+body {
     background-color: #d9eee8;
 }
-
-
-.reg{
-    font-family: 'Rosarium';
-	font-size: 250%;
-	background-color: rgb(189, 228, 213);
-
-	position: absolute;
-
-	display: flex;
-	
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-
-	padding: 3.5%;
-	padding-left: 2%;
-
-	border-radius: 10px;
-
-}
-
-.conteiner{
-	position: relative;
-	left: 7%;
-}
-
-
-
-
-.form-reg{
-	margin: 0 auto;
-	margin-top: 5%;
-	padding-left: 20%;
-}
-
-.form{
-	margin-bottom: 0;
-	margin-top: 5%;
-
-}
-
-form{
-	margin: 0 auto;
-}
-
-input{
-	border-color: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
