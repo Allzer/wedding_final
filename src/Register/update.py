@@ -1,4 +1,4 @@
-from Guests.model import Guests
+from src.Guests.model import Guests
 from database import db
 
 

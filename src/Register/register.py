@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, request
 from sqlalchemy import desc
 
-from Guests.model import Guests
-from Register.update import update
+from src.Guests.model import Guests
+from src.Register.update import update
 
 reg = Blueprint('reg', __name__, template_folder='templates', static_folder='static')
 
