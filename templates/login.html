@@ -1,7 +1,8 @@
 {% extends 'base.jinja2' %}
 
 {% block head %}
-    <link type="text/css" href="{{ url_for('.static', filename='css/login.css')}}" rel="stylesheet" />
+    <link type="text/css" href="{{ url_for('static', filename='css/login.css')}}" rel="stylesheet" />
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
 {% endblock %}
 
 {% block title %}
@@ -13,11 +14,11 @@
 {% block content %}
 <div class="reg">
     <div class="container">
-        <form method="post">
+        <form method="post" onsubmit="return validateForm()">
             <span>Авторизация</span>
-            <p class="form"><input class="for-form" type="text" placeholder="Номер телефона" name="p_number"/></p>
-            <p class="form"><input class="for-form" type="text" placeholder="Пароль" name="psw"/></p>
-            <p class="form-reg" ><input type="submit" value="Регистрация"/></p>
+            <p class="form"><input class="for-form" type="text" placeholder="Номер телефона" name="p_number" required/></p>
+            <p class="form"><input class="for-form" type="password" placeholder="Пароль" name="psw" id="password" required/></p>
+            <p class="form-reg"><input type="submit" value="Войти"/></p>
         </form>
     </div>
 </div>

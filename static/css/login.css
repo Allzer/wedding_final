@@ -15,7 +15,6 @@
     border-radius: 10px;
     max-width: 450px;
     margin: auto;
-
     top: 50%;
     transform: translateY(27%);
 }
@@ -25,7 +24,7 @@
     text-align: center;
 }
 
-.form{
+.form {
     margin: auto;
 }
 
@@ -48,10 +47,9 @@
     color: #999;
 }
 
-.form-reg{
+.form-reg {
     margin: auto;
     margin-bottom: -20%;
-
 }
 
 .form-reg input[type="submit"] {
@@ -75,3 +73,16 @@
 body {
     background-color: #d9eee8;
 }
+
+.invalid {
+    border: 2px solid red;
+}
+
+.invalid::after {
+    content: "Неверный логин или пароль";
+    color: red;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+

@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash
+from flask import Blueprint, render_template, request, flash, redirect
 from werkzeug.security import generate_password_hash, check_password_hash
 from src.Register.update import update
 
@@ -17,6 +17,7 @@ def index():
             if check_password_hash(hash, form['ag_psw']):
                 update(form)
                 flash('Вы успешно зарегистрировались')
+                return redirect('http://127.0.0.1:5000/login', code=302, Response=None)
             else:
                 flash('Пароли не совпадают')
         else:
