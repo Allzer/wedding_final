@@ -74,15 +74,17 @@ body {
     background-color: #d9eee8;
 }
 
-.invalid {
-    border: 2px solid red;
+.zareg{
+    font-size: 35px;
+    padding-right: 200px;
+    text-decoration: none;
+    color: #4a79f4;
 }
 
-.invalid::after {
-    content: "Неверный логин или пароль";
-    color: red;
-    font-size: 14px;
-    display: block;
-    margin-top: 5px;
+.zareg:focus{
+    text-decoration: #4a79f4;
+
+
 }
+
 

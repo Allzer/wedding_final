@@ -42,6 +42,7 @@ def load_user(user_id):
 
 @app.route("/index")
 @app.route("/")
+@login_required
 def index():
     return render_template('index.html', title='Главная страница')
 
@@ -58,7 +59,8 @@ def login():
             flash('Успешный вход', 'success')
             return redirect(url_for('index'))
         else:
-            flash('Неверный номер телефона или пароль', 'danger')
+            flash('Неверный номер телефона или пароль', 'error')
+            print('Неверный номер телефона или пароль')
             return redirect(url_for('login'))
 
     return render_template("login.html", title='Авторизация')
