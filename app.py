@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, flash, url_for
+from flask import Flask, render_template, request, redirect, flash, url_for, session
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
 from flask_migrate import Migrate
 from werkzeug.security import check_password_hash
@@ -28,14 +28,13 @@ class User(UserMixin):
         self.p_number = guest.p_number
         self.password = guest.password
         self.active = True
-
     @property
     def is_active(self):
         return self.active
 
 @login_manager.user_loader
 def load_user(user_id):
-    guest = Guests.query.get(int(user_id))
+    guest = db.session.get(Guests, int(user_id))
     if guest:
         return User(guest)
     return None
@@ -51,7 +50,7 @@ def login():
     if request.method == 'POST':
         p_number = request.form.get('p_number')
         password = request.form.get('psw')
-        guest = Guests.query.filter_by(p_number=p_number).first()
+        guest = db.session.query(Guests).filter_by(p_number=p_number).first()
 
         if guest and check_password_hash(guest.password, password):
             user = User(guest)
@@ -62,8 +61,10 @@ def login():
             flash('Неверный номер телефона или пароль', 'error')
             print('Неверный номер телефона или пароль')
             return redirect(url_for('login'))
-
     return render_template("login.html", title='Авторизация')
+
+@app.route('/profile')
+
 
 @app.route('/logout')
 @login_required

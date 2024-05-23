@@ -2,7 +2,6 @@
 
 {% block head %}
     <link type="text/css" href="{{ url_for('static', filename='css/login.css')}}" rel="stylesheet" />
-<!--    <script src="{{ url_for('static', filename='js/login.js') }}"></script>-->
 {% endblock %}
 
 {% block title %}
@@ -20,7 +19,6 @@
             <p class="form"><input class="for-form" type="password" placeholder="Пароль" name="psw" id="password" required/></p>
             <p class="form-reg"><input type="submit" value="Войти"/></p>
         </form>
-
         <dev class="button_reg">
             <a class="zareg" href="/registrations">Регистрация</a>
         </dev>
