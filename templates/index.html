@@ -11,8 +11,17 @@
 <body>
     {% block content %}
     {{super ()}}
-    <div class="preview">
-        Главная страница
+    <div class="all">
+        <div class="preview">
+            Главная страница
+        </div>
+
+        <div class="questions">
+        </div>
     </div>
     {% endblock %}
+    {% block scripts %}
+        <script src="//megatimer.ru/get/02c2e4b6b152bb3dd98068144248cf1e.js"></script>
+    {% endblock %}
+
 </body>

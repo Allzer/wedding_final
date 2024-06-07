@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, flash, url_for, session
-from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from flask_migrate import Migrate
 from werkzeug.security import check_password_hash
 from config import SECRET_KEY, DATABASE_URL
@@ -24,6 +24,8 @@ login_manager.login_view = 'login'
 
 class User(UserMixin):
     def __init__(self, guest):
+        self.name = guest.first_name
+        self.last_name = guest.last_name
         self.id = guest.id
         self.p_number = guest.p_number
         self.password = guest.password
@@ -54,8 +56,9 @@ def login():
 
         if guest and check_password_hash(guest.password, password):
             user = User(guest)
-            login_user(user)
-            flash('Успешный вход', 'success')
+            rm = True if request.form.get('remainme') else False
+            login_user(user, remember=rm)
+
             return redirect(url_for('index'))
         else:
             flash('Неверный номер телефона или пароль', 'error')
@@ -64,7 +67,11 @@ def login():
     return render_template("login.html", title='Авторизация')
 
 @app.route('/profile')
-
+@login_required
+def profile():
+    name = current_user.name
+    last_name = current_user.last_name
+    return render_template('profile.html', title='Профиль', name=name, l_name=last_name)
 
 @app.route('/logout')
 @login_required

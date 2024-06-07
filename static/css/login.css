@@ -56,6 +56,7 @@
     background-color: #1ddc4f;
     color: white;
     padding: 10px 20px;
+    margin-top: 20px;
     border: none;
     border-radius: 5px;
     text-align: center;
@@ -74,11 +75,18 @@ body {
     background-color: #d9eee8;
 }
 
+
 .zareg{
     font-size: 35px;
     color: #4a79f4;
 }
 
+.zapomn{
+    font-family: "Calibri";
+    font-size: 15px;
+    display: block;
+    padding-right: 230px;
 
+}
 
 
