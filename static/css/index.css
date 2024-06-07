@@ -18,6 +18,85 @@ body{
 	margin-left: -2%;
 	margin-top: -4%;
 	margin-right: -2%;
+}
 
+img{
+	width: 35%;
+	height: 100%;
+}
+
+.image{
+	text-align: center;
+}
+
+.invite{
+	font-family: 'Rosarium';
+	font-size: 45px;
+	text-align: center;
 
 }
+
+.dress{
+	font-family: 'Rosarium';
+	font-size: 75px;
+	text-align: center;
+
+}
+
+.dress_text{
+	font-family: 'Rosarium';
+	font-size: 30px;
+	text-align: center;
+	margin-top: 60px;
+	margin-bottom: 50px;
+}
+
+.txt{
+	font-family: 'Rosarium';
+	font-size: 20px;
+	text-align: center;
+}
+
+.reg{
+	font-family: 'Rosarium';
+	font-size: 50px;
+	text-align: center;
+}
+
+.reg_link{
+	text-decoration: none;
+}
+
+.time{
+	font-family: 'Rosarium';
+	font-size: 50px;
+	text-align: center;
+}
+
+.discussion{
+	font-family: 'Rosarium';
+	font-size: 25px;
+	text-align: center;
+
+}
+
+.group{
+	border: solid black;
+	border-radius: 10px;
+	font-family: 'Rosarium';
+	font-size: 50px;
+	text-align: center;
+	margin-left: 500px;
+	margin-right: 520px;
+}
+
+.group_link{
+	text-decoration: none;
+}
+
+
+
+/*Убрать полосу прокрутки для всей страницы*/
+::-webkit-scrollbar {
+	width: 0;
+  }
