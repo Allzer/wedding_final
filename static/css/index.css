@@ -95,8 +95,52 @@ img{
 }
 
 
-
 /*Убрать полосу прокрутки для всей страницы*/
 ::-webkit-scrollbar {
 	width: 0;
   }
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+.btn {
+	width: 180px;
+	height: 60px;
+	cursor: pointer;
+	background-color: #87dfc8;
+
+	border: 0px solid;
+	border-radius: 10px;
+
+	outline: none;
+	transition: 0.2s ease-in-out;
+	font-family: 'Lato', sans-serif;
+}
+
+svg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	fill: none;
+	stroke: #fff;
+	stroke-dasharray: 150 480;
+	stroke-dashoffset: 150;
+	transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+	transition: 0.2s ease-in-out;
+	background: #81b4ef;
+
+}
+
+.btn:hover svg {
+	stroke-dashoffset: -480;
+}
+
+.btn a {
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	font-weight: 100;
+}
+
