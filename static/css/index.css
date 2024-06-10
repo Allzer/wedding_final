@@ -21,12 +21,24 @@ body{
 }
 
 img{
-	width: 35%;
-	height: 100%;
+	width: 700px;
+	height: 900px;
 }
 
 .image{
 	text-align: center;
+}
+
+.photo{
+	text-align: center;
+	
+}
+
+.newlyweds{
+	font-family: 'Rosarium';
+	font-size: 45px;
+	text-align: center;
+	
 }
 
 .invite{
