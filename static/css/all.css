@@ -38,8 +38,8 @@ img {
 
 img.double {
     border-radius: 1vw;
-    width: 75vw; /* Увеличено с 100% до 150% */
-    height: 100vw; /* Увеличено с 100% до 150% */
+    width: 75vw; /* Увеличено с 100% до 75% */
+    height: 100vw; /* Увеличено с 100% до 100% */
 }
 
 /* Увеличение фотографии только на экранах шире 600px */
@@ -53,8 +53,6 @@ img.double {
     .reg, .time, .discussion {
         width: calc(100% - 20px);
     }
-
-    
 }
 
 @media (max-width: 599px) {
@@ -84,20 +82,17 @@ img.double {
     margin-bottom: 30vw;
 }
 
-
 .invite, .newlyweds, .dress_text, .time, .discussion {
     font-family: 'Rosarium';
     text-align: center;
-
 }
 
 .newlyweds, .invite, .dress_text, .time {
     font-size: 6vw;
 }
 
-ul{
+ul {
     margin-left: 11vw;
-    
 }
 
 .dress {
@@ -159,8 +154,20 @@ li {
     margin-left: 20px;
 }
 
-
 /* Стили для кнопки и ссылки в ней */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn {
     width: 18vw;
     height: 6vw;
@@ -172,11 +179,14 @@ li {
     transition: 0.2s ease-in-out;
     font-family: 'Lato', sans-serif;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .btn svg {
     position: absolute;
-    left: 0;
     top: 0;
     fill: none;
     stroke: #fff;
@@ -189,9 +199,7 @@ li {
     background: #81b4ef;
 }
 
-
-.btn a {
-    text-decoration: none;
+.btn span {
     color: white;
     font-size: 1.8vw;
     font-weight: 100;
@@ -207,6 +215,10 @@ li {
 
 .krugi {
     width: 45vw;
+}
+
+.money{
+    font-size: 4vw;
 }
 
 .accept {
