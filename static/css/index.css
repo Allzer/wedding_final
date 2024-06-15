@@ -1,88 +1,230 @@
+/* Общие стили для страницы */
+body {
+    font-family: 'Rosarium';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d9eee8;
+}
+
+/* Скрытие скроллбара */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Общие стили для всех блоков */
+.image, .photo, .discussion, .map, .reg, .time {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Стили для изображений */
+img {
+    width: 100vw;
+    height: auto;
+}
+
+.image {
+    text-align: center;
+}
+
+img.double {
+    border-radius: 1vw;
+    width: 75vw; /* Увеличено с 100% до 75% */
+    height: 100vw; /* Увеличено с 100% до 100% */
+}
+
+/* Увеличение фотографии только на экранах шире 600px */
+@media (min-width: 600px) {
+    .all {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .reg, .time, .discussion {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 599px) {
+    .main-image {
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+/* Стили для карты Google */
+.map {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: auto;
+}
+
+.map iframe {
+    width: 100%;
+    height: 17vw;
+    border: 0;
+    border-radius: 0.5vw;
+}
+
+/* Стили для текстовых блоков и параграфов */
+.invite, .dress, .txt {
+    text-align: center;
+    margin-bottom: 30vw;
+}
+
+.invite, .newlyweds, .dress_text, .time, .discussion {
+    font-family: 'Rosarium';
+    text-align: center;
+}
+
+.newlyweds, .invite, .dress_text, .time {
+    font-size: 6vw;
+}
+
+ul {
+    margin-left: 11vw;
+}
+
+.dress {
+    font-size: 5vw;
+}
+
+.txt, .discussion {
+    font-size: 3vw;
+}
+
+.reg {
+    font-size: 5vw;
+}
+
+.reg_link {
+    text-decoration: none;
+}
+
+.group {
+    border: solid black;
+    border-radius: 0.5vw;
+    font-family: 'Rosarium';
+    font-size: 5vw;
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 520px;
+}
+
+.group_link {
+    text-decoration: none;
+}
+
+li {
+    text-decoration: none;
+}
+
+.time ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.time li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.datetime {
+    flex: 1;
+    text-align: left;
+    font-size: 4vw;
+}
+
+.event-name {
+    flex: 2;
+    text-align: center;
+    font-size: 4vw;
+    margin-left: 20px;
+}
+
+/* Стили для кнопки и ссылки в ней */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    width: 18vw;
+    height: 6vw;
+    cursor: pointer;
+    background-color: #87dfc8;
+    border: 0;
+    border-radius: 0.5vw;
+    outline: none;
+    transition: 0.2s ease-in-out;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn svg {
+    position: absolute;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background: #81b4ef;
+}
+
+.btn span {
+    color: white;
+    font-size: 1.8vw;
+    font-weight: 100;
+}
+
+/* Импорт шрифтов */
 @font-face {
-	font-family: 'Rosarium';
-	src: url('../fonts/rosarium.ttf'); /* IE 9 Compatibility Mode */
+    font-family: 'Rosarium';
+    src: url('../fonts/rosarium.ttf'); /* IE 9 Compatibility Mode */
 }
 
 @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
 
-
-body{
-    background-color: #d9eee8;
+.krugi {
+    width: 45vw;
 }
 
-
-.newlyweds{
-	font-family: 'Rosarium';
-	font-size: 3vw;
-	text-align: center;
-	
+.money{
+    font-size: 4vw;
 }
 
-.invite{
-	font-family: 'Rosarium';
-	font-size: 3vw;
-	text-align: center;
-
-}
-
-.dress{
-	font-family: 'Rosarium';
-	font-size: 5vw;
-	text-align: center;
-
-}
-
-.dress_text{
-	font-family: 'Rosarium';
-	font-size: 3vw;
-	text-align: center;
-	margin-top: 60px;
-	margin-bottom: 50px;
-}
-
-.txt{
-	font-family: 'Rosarium';
-	font-size: 2vw;
-	text-align: center;
-}
-
-.reg{
-	font-family: 'Rosarium';
-	font-size: 5vw;
-	text-align: center;
-}
-
-.reg_link{
-	text-decoration: none;
-}
-
-.time{
-	font-family: 'Rosarium';
-	font-size: 5vw;
-	text-align: center;
-}
-
-.discussion{
-	font-family: 'Rosarium';
-	font-size: 2.5vw;
-	text-align: center;
-
-}
-
-.group{
-	border: solid black;
-	border-radius: 0.5vw;
-	font-family: 'Rosarium';
-	font-size: 5vw;
-	text-align: center;
-	margin-left: 500px;
-	margin-right: 520px;
-}
-
-.group_link{
-	text-decoration: none;
-}
-
-li{
-	text-decoration: none;
+.accept {
+    font-family: 'Rosarium';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 4vw;
 }
