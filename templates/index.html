@@ -1,52 +1,68 @@
 {% extends 'base.html' %}
 
-<head>
-    {% block title %}
-    <title>
-        {{title}}
-    </title>
-    {% endblock%}
-</head>
+{% block title %}
+<title>{{ title }}</title>
+{% endblock %}
 
-<body>
-    {% block content %}
-    {{super ()}}
-    <div class="all">
-        <div class="image">
-            <img src="static/img/ramka.png">
+{% block content %}
+{{ super() }}
+<div class="all">
+    <div class="image">
+        <img src="static/img/ramka_2.png" alt="Frame" class="main-image">
+    </div>
+
+    <script src="//megatimer.ru/get/e13c72f565ca0f5b84e888e26fad9d47.js"></script>
+    <p class="invite">Мы рады сообщить Вам, что 14.08.2024 состоится самое главное торжество в нашей жизни - день нашей свадьбы!
+        Приглашаем Вас разделить с нами радость этого незабываемого дня.
+    </p>
+
+    <div class="photo">
+        <p class="newlyweds">Жених и Невеста</p>
+        <img class="double" src="static/img/2.jpg" alt="Bride and Groom">
+    </div>
+
+    <div>
+        <p class="dress_text">Будем очень благодарны, если вы поддержите стиль и цвет нашей свадьбы в своих нарядах:</p>
+        <img class="krugi"  src="static/img/krugi.png" alt="Dress Code">
+    </div>
+
+    <div class="reg">
+        <p class="accept">Просим подтвердить своё присутствие до 14.07.24</p>
+        <div class="container">
+            <div class="center">
+                <button class="btn">
+                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                    </svg>
+                    <span><a href="https://forms.gle/wFL86abu8p5PkHJV9">Подтвердить</a></span>
+                </button>
+            </div>
         </div>
+    </div>
 
-        <script src="//megatimer.ru/get/02c2e4b6b152bb3dd98068144248cf1e.js"></script>
+    <div class="time">
+        <p>Свадебное расписание</p>
+        <ul>
+            <li>
+                <span class="datetime">16:00 14.08.2024</span>
+                <span class="event-name">Welcome</span>
+            </li>
+            <li>
+                <span class="datetime">17:00 14.08.2024</span>
+                <span class="event-name">Выездная регистрация</span>
+            </li>
+            <li>
+                <span class="datetime">17:30 14.08.2024</span>
+                <span class="event-name">Банкет</span>
+            </li>
+        </ul>
+    </div>
 
-        <p class="invite">Мы рады сообщить Вам, что 14.08.2024 состоится самое главное торжество в нашей жизни - день нашей свадьбы!
-            Приглашаем Вас разделить с нами радость этого незабываемого дня.
-        </p>
-
-        <div class="photo">
-            <p class="newlyweds">
-                Жених и Невеста
-            </p>
-            <img class="double" src="\static\img\2.jpg">
-        </div>
-
-        <div>
-            <p class="dress">Dresscode</p>
-            <p class="txt">Тут будут кружочки с палитрой</p>
-            <p class="dress_text">Будем благодарны, если при выборе нарядов на наше торжество вы придержитесь следующей палитры:</p>
-        </div>
-
-        <div  class="reg">
-            <a class="reg_link" href="https://forms.gle/wFL86abu8p5PkHJV9">Регистрация</a>
-        </div>
-
-        <div class="time">
-            <p>Расписание мероприятия</p>
-        </div>
-
-        <div class="discussion">
-            <p>Мы создали группу в Телеграмм, куда вы можете вступить и загружать ваши фото и видео с нашей свадьбы, а также просто общатсья и знакомиться</p>
-            <div class="container">
-                <div class="center">
+    <div class="discussion">
+        <p>Мы создали группу в Телеграмм, куда вы можете вступить и загрузить ваши фото и видео с нашей свадьбы, а также просто общатсья и знакомиться</p>
+        <div class="container">
+            <div class="center">
                 <button class="btn">
                     <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
                     <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
@@ -54,19 +70,12 @@
                     </svg>
                     <span><a href="https://web.telegram.org/a/#-4213848181">Telegram</a></span>
                 </button>
-                </div>
             </div>
         </div>
-        
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5070622.655467511!2d35.43320146677297!3d51.64354013320923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b549aca5f9aa01%3A0x3d1cd634d4e495fb!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0YLQtdGF0L3QuNGH0LXRgdC60LjQuSDRg9C90LjQstC10YDRgdC40YLQtdGCINGB0LLRj9C30Lgg0Lgg0LjQvdGE0L7RgNC80LDRgtC40LrQuA!5e0!3m2!1sru!2sru!4v1718066970776!5m2!1sru!2sru" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-
-
-        
     </div>
-    {% endblock %}
 
-
-</body>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.6689713748647!2d46.03603137654609!3d51.555968771824425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4114c87fb9b57b03%3A0xa089472ed4dfa132!2z0JHQtdC70YzQstC10LTQtdGA0Yo!5e0!3m2!1sru!2snl!4v1718359238948!5m2!1sru!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+{% endblock %}

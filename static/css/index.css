@@ -3,68 +3,38 @@
 	src: url('../fonts/rosarium.ttf'); /* IE 9 Compatibility Mode */
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+
 body{
     background-color: #d9eee8;
 }
 
-.preview{
-	background-color: rgb(189, 228, 213);
-    font-family: 'Rosarium';
-	font-size: 250%;
-
-	padding-left: 3%;
-	padding-top: 3.5%;
-
-	margin-left: -2%;
-	margin-top: -4%;
-	margin-right: -2%;
-}
-
-img{
-	width: 700px;
-	height: 900px;
-}
-
-.image{
-	text-align: center;
-}
-
-.photo{
-	text-align: center;	
-}
-
-.double{
-	width: 400px;
-	height: 550px;
-	border-radius: 20px;
-
-	
-}
 
 .newlyweds{
 	font-family: 'Rosarium';
-	font-size: 45px;
+	font-size: 3vw;
 	text-align: center;
 	
 }
 
 .invite{
 	font-family: 'Rosarium';
-	font-size: 45px;
+	font-size: 3vw;
 	text-align: center;
 
 }
 
 .dress{
 	font-family: 'Rosarium';
-	font-size: 75px;
+	font-size: 5vw;
 	text-align: center;
 
 }
 
 .dress_text{
 	font-family: 'Rosarium';
-	font-size: 30px;
+	font-size: 3vw;
 	text-align: center;
 	margin-top: 60px;
 	margin-bottom: 50px;
@@ -72,13 +42,13 @@ img{
 
 .txt{
 	font-family: 'Rosarium';
-	font-size: 20px;
+	font-size: 2vw;
 	text-align: center;
 }
 
 .reg{
 	font-family: 'Rosarium';
-	font-size: 50px;
+	font-size: 5vw;
 	text-align: center;
 }
 
@@ -88,22 +58,22 @@ img{
 
 .time{
 	font-family: 'Rosarium';
-	font-size: 50px;
+	font-size: 5vw;
 	text-align: center;
 }
 
 .discussion{
 	font-family: 'Rosarium';
-	font-size: 25px;
+	font-size: 2.5vw;
 	text-align: center;
 
 }
 
 .group{
 	border: solid black;
-	border-radius: 10px;
+	border-radius: 0.5vw;
 	font-family: 'Rosarium';
-	font-size: 50px;
+	font-size: 5vw;
 	text-align: center;
 	margin-left: 500px;
 	margin-right: 520px;
@@ -113,65 +83,6 @@ img{
 	text-decoration: none;
 }
 
-
-/*Убрать полосу прокрутки для всей страницы*/
-::-webkit-scrollbar {
-	width: 0;
-  }
-
-@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
-
-.btn {
-	width: 180px;
-	height: 60px;
-	cursor: pointer;
-	background-color: #87dfc8;
-
-	border: 0px solid;
-	border-radius: 10px;
-
-	outline: none;
-	transition: 0.2s ease-in-out;
-	font-family: 'Lato', sans-serif;
-}
-
-svg {
-	position: absolute;
-	left: 0;
-	top: 0;
-	fill: none;
-	stroke: #fff;
-	stroke-dasharray: 150 480;
-	stroke-dashoffset: 150;
-	transition: 0.2s ease-in-out;
-}
-
-.btn:hover {
-	transition: 0.2s ease-in-out;
-	background: #81b4ef;
-
-}
-
-.btn:hover svg {
-	stroke-dashoffset: -480;
-}
-
-.btn a {
+li{
 	text-decoration: none;
-	color: white;
-	font-size: 18px;
-	font-weight: 100;
 }
-
-.map{
-	text-align: center;
-	margin-top: 40px;
-}
-
-iframe{
-	border-radius: 10px;
-}
-
-
-
-

@@ -1,0 +1,21 @@
+img{
+	width: 40vw;
+	height: 60vw;
+}
+
+.image{
+	text-align: center;
+}
+
+.photo{
+	text-align: center;	
+}
+
+.double{
+	
+	border-radius: 1vw;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+  }

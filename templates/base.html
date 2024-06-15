@@ -1,18 +1,19 @@
 {% block head%}
-    <link type="text/css" href="{{ url_for('static', filename='css/index.css')}}" rel="stylesheet" />
+    <link type="text/css" href="{{ url_for('static', filename='css/all.css')}}" rel="stylesheet" />
+
 {% endblock%}
     
 
     {% block title %}
         <title class="title">{{title}}</title>
-    {% endblock -%}
+    {% endblock %}
 
 <body>
     <div>
 
-        {% block content -%}
+        {% block content %}
 
-        {% endblock -%}
+        {% endblock %}
 
         {% block scripts %}
         {% endblock %}
