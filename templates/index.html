@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
-<html lang="ru">
-<head>
-    {% block title %}
-    <title>{{ title }}</title>
-    {% endblock %}
+{% block head%}
     <link rel="stylesheet" href="static/css/index.css">
-</head>
+{% endblock%}
+
+{% block title %}
+    <title>{{ title }}</title>
+{% endblock %}
+
 <body>
     {% block content %}
     {{ super() }}
@@ -27,7 +28,7 @@
 
         <div>
             <p class="dress_text">Будем очень благодарны, если вы поддержите стиль и цвет нашей свадьбы в своих нарядах:</p>
-            <img class="krugi" src="static/img/krugi.png" alt="Dress Code">
+            <img class="krugi" src="static/img/krugi_2.png" alt="Dress Code">
         </div>
 
         <div class="reg">
@@ -49,15 +50,15 @@
             <p>Свадебное расписание</p>
             <ul>
                 <li>
-                    <span class="datetime">16:00 14.08.2024</span>
+                    <span class="datetime">16:00</span>
                     <span class="event-name">Welcome</span>
                 </li>
                 <li>
-                    <span class="datetime">17:00 14.08.2024</span>
+                    <span class="datetime">17:00</span>
                     <span class="event-name">Выездная регистрация</span>
                 </li>
                 <li>
-                    <span class="datetime">17:30 14.08.2024</span>
+                    <span class="datetime">17:30</span>
                     <span class="event-name">Банкет</span>
                 </li>
             </ul>

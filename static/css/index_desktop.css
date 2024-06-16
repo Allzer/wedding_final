@@ -142,6 +142,7 @@ li {
 }
 
 .datetime {
+    margin-left: 15vw;
     flex: 1;
     text-align: left;
     font-size: 4vw;
@@ -151,7 +152,7 @@ li {
     flex: 2;
     text-align: center;
     font-size: 4vw;
-    margin-left: 20px;
+    margin-right: 15vw;
 }
 
 /* Стили для кнопки и ссылки в ней */
