@@ -1,92 +1,115 @@
 {% extends 'base.html' %}
-{% block head %}
+{% block head%}
     <link rel="stylesheet" href="static/css/index.css">
-{% endblock %}
+{% endblock%}
 
 {% block title %}
     <title>{{ title }}</title>
 {% endblock %}
 
 <body>
-    {% block content %}
-    {{ super() }}
-    <div class="all">
-        <div class="image">
-            <img src="static/img/ramka_2.png" alt="Frame" class="main-image">
-        </div>
-
-        <script src="//megatimer.ru/get/e13c72f565ca0f5b84e888e26fad9d47.js"></script>
-        <p class="invite">
-            Мы рады сообщить Вам, что 14.08.2024 состоится самое главное торжество в нашей жизни - день нашей свадьбы!
-            Приглашаем Вас разделить с нами радость этого незабываемого дня.
-        </p>
-
-        <div class="photo">
-            <p class="newlyweds">Жених и Невеста</p>
-            <img class="double" src="static/img/2.jpg" alt="Bride and Groom">
-        </div>
-
-        <div>
-            <p class="dress_text">Будем очень благодарны, если вы поддержите стиль и цвет нашей свадьбы в своих нарядах:</p>
-            <img class="krugi" src="static/img/krugi_2.png" alt="Dress Code">
-        </div>
-
-        <div class="reg">
-            <p class="accept">Просим подтвердить своё присутствие до 14.07.24</p>
-            <div class="container">
-                <div class="center">
-                    <a href="https://forms.gle/5E64SF3Q9kcG86qX8" class="btn">
-                        <svg width="300px" height="100px" viewBox="0 0 300 100" class="border">
-                            <polyline points="299,1 299,99 1,99 1,1 299,1" class="bg-line"></polyline>
-                            <polyline points="299,1 299,99 1,99 1,1 299,1" class="hl-line"></polyline>
-                        </svg>
-                        <span>Подтвердить</span>
-                    </a>
+    <div>
+        {% block content %}
+        {{ super() }}
+        <div class="all">
+            <div class="image">
+                <img src="static/img/ramka_2.png" alt="Frame" class="main-image">
+            </div>
+    
+            <script src="//megatimer.ru/get/e13c72f565ca0f5b84e888e26fad9d47.js"></script>
+            <p class="invite">
+                Мы рады сообщить Вам, что 14.08.2024 состоится самое главное торжество в нашей жизни - день нашей свадьбы!
+                Приглашаем Вас разделить с нами радость этого незабываемого дня.
+            </p>
+    
+            <div class="photo">
+                <img class="double" src="static/img/2.jpg" alt="Bride and Groom">
+            </div>
+    
+            <div>
+                <p class="dress_text">Будем очень благодарны, если вы поддержите стиль и цвет нашей свадьбы в своих нарядах:</p>
+                <img class="krugi" src="static/img/krugi_2.png" alt="Dress Code">
+            </div>
+    
+            <div class="reg">
+                <p class="accept">Просим подтвердить своё присутствие до 14.07.24</p>
+                <div class="container">
+                    <div class="center">
+                        <a href="https://forms.gle/5E64SF3Q9kcG86qX8" class="btn">
+                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line"></polyline>
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line"></polyline>
+                            </svg>
+                            <span>Подтвердить</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="time">
-            <p>Свадебное расписание</p>
-            <ul>
-                <li>
-                    <span class="datetime">16:00</span>
-                    <span class="event-name">Welcome</span>
-                </li>
-                <li>
-                    <span class="datetime">17:00</span>
-                    <span class="event-name">Выездная регистрация</span>
-                </li>
-                <li>
-                    <span class="datetime">17:30</span>
-                    <span class="event-name">Банкет</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="money">
-            <p>Приносите с собой веселье и радость в душе, а подарки – в конверте!</p>
-        </div>
-
-        <div class="discussion">
-            <p>Мы создали группу в Телеграмм, куда вы можете вступить и загрузить ваши фото и видео с нашей свадьбы, а также просто общаться и знакомиться</p>
-            <div class="container">
-                <div class="center">
-                    <a href="https://t.me/Friends_wedding" class="btn">
-                        <svg width="300px" height="100px" viewBox="0 0 300 100" class="border">
-                            <polyline points="299,1 299,99 1,99 1,1 299,1" class="bg-line"></polyline>
-                            <polyline points="299,1 299,99 1,99 1,1 299,1" class="hl-line"></polyline>
-                        </svg>
-                        <span>Telegram</span>
-                    </a>
+            <div class="time_branch">
+                <!-- <div class="up_branch">
+                    <img class="up" src="static/img/up_branch.png">
+                </div> -->
+                <div class="time">
+                    <p class="schedule">Программа торжества</p>
+                    <ul>
+                        <li>
+                            <span class="datetime">16:00</span>
+                            <span class="event-name">Welcome</span>
+                        </li>
+                        <li>
+                            <span class="datetime">17:00</span>
+                            <span class="event-name">Выездная регистрация</span>
+                        </li>
+                        <li>
+                            <span class="datetime">17:30</span>
+                            <span class="event-name">Банкет</span>
+                        </li>
+                    </ul>
                 </div>
+                <!-- <div class="down_branch">
+                    <img class="down" src="static/img/down_branch.png">
+                </div> -->
             </div>
-        </div>
+            
+            <div class="place">
+                <p>Мы будем ждать вас в ресторане Бельведеръ по адресу ул.Аэропорт, 18</p>
+                <div class="container">
+                    <div class="center">
+                        <a href="https://yandex.ru/maps/org/belveder/154422292759/?ll=46.032955%2C51.540821&mode=search&sll=46.032955%2C51.540817&source=serp_navig&text=ресторан%20бельведер%20саратов&z=13" class="btn">
+                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line"></polyline>
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line"></polyline>
+                            </svg>
+                            <span>Карта</span>
+                        </a>
+                    </div>
+                </div>
+            </div>    
+            <div class="discussion">
+                <p>Переходите в наш свадебный канал, где будет ещё больше актуальной информации</p>
+                <div class="container">
+                    <div class="center">
+                        <a href="https://t.me/Friends_wedding" class="btn">
+                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line"></polyline>
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line"></polyline>
+                            </svg>
+                            <span>Telegram</span>
+                        </a>
+                    </div>
+                </div>
+                <p>Приносите к нам на торжество веселье и радость в душе, а подарки – в конверте!</p>
+            </div>
 
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.6689713748647!2d46.03603137654609!3d51.555968771824425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4114c87fb9b57b03%3A0xa089472ed4dfa132!2z0JHQtdC70YzQstC10LTQtdGA0Yo!5e0!3m2!1sru!2snl!4v1718359238948!5m2!1sru!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+            <!-- <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.6689713748647!2d46.03603137654609!3d51.555968771824425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4114c87fb9b57b03%3A0xa089472ed4dfa132!2z0JHQtdC70YzQstC10LTQtdGA0Yo!5e0!3m2!1sru!2snl!4v1718359238948!5m2!1sru!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div> -->
         </div>
+        {% endblock %}
+    
+        
+    
     </div>
-    {% endblock %}
 </body>
 </html>

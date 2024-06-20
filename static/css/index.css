@@ -79,7 +79,7 @@ img.double {
 /* Стили для текстовых блоков и параграфов */
 .invite, .dress, .txt {
     text-align: center;
-    margin-bottom: 30vw;
+    margin-bottom: 7vw;
 }
 
 .invite, .newlyweds, .dress_text, .time, .discussion {
@@ -96,11 +96,11 @@ ul {
 }
 
 .dress {
-    font-size: 5vw;
+    font-size: 6vw;
 }
 
-.txt, .discussion {
-    font-size: 3vw;
+.txt, .discussion, .place{
+    font-size: 6vw;
 }
 
 .reg {
@@ -144,16 +144,16 @@ li {
 .datetime {
     flex: 1;
     text-align: left;
-    font-size: 4vw;
+    font-size: 6vw;
     margin-left: 9vw;
 }
 
 .event-name {
     flex: 2;
     text-align: center;
-    font-size: 4vw;
+    font-size: 6vw;
     margin-right: 9vw;
-}
+}z
 
 /* Стили для кнопки и ссылки в ней */
 .container {
@@ -175,7 +175,7 @@ li {
     cursor: pointer;
     background-color: #87dfc8;
     border: 0;
-    border-radius: 0.5vw;
+    border-radius: 1.2vw;
     outline: none;
     transition: 0.2s ease-in-out;
     font-family: 'Lato', sans-serif;
@@ -190,7 +190,6 @@ li {
     position: absolute;
     top: 0;
     fill: none;
-    
     transition: 0.2s ease-in-out;
 }
 
@@ -201,7 +200,7 @@ li {
 .btn span {
     color: white;
     font-size: 3vw;
-    font-weight: 100;
+    font-weight: 350;
 }
 
 /* Импорт шрифтов */

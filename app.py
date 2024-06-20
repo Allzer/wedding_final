@@ -12,8 +12,8 @@ def index():
     if 'Mobile' in user_agent or 'Android' in user_agent or 'iPhone' in user_agent:
         return render_template('index.html')
     else:
-        return render_template('index_desktop.html')
+        return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
 

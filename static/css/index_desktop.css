@@ -87,7 +87,7 @@ img.double {
     text-align: center;
 }
 
-.newlyweds, .invite, .dress_text, .time {
+.place, .schedule, .newlyweds, .invite, .dress_text, .time {
     font-size: 3vw;
 }
 
@@ -219,7 +219,7 @@ li {
 }
 
 .money{
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 .accept {
