@@ -28,7 +28,7 @@ body {
 
 /* Стили для изображений */
 img {
-    width: 100vw;
+    width: 30vw;
     height: auto;
 }
 
@@ -38,8 +38,8 @@ img {
 
 img.double {
     border-radius: 1vw;
-    width: 75vw; /* Увеличено с 100% до 75% */
-    height: 100vw; /* Увеличено с 100% до 100% */
+    width: 30vw; /* Увеличено с 100% до 75% */
+    height: auto; /* Увеличено с 100% до 100% */
 }
 
 /* Увеличение фотографии только на экранах шире 600px */
@@ -71,7 +71,7 @@ img.double {
 
 .map iframe {
     width: 100%;
-    height: 23vw;
+    height: 17vw;
     border: 0;
     border-radius: 0.5vw;
 }
@@ -79,7 +79,7 @@ img.double {
 /* Стили для текстовых блоков и параграфов */
 .invite, .dress, .txt {
     text-align: center;
-    margin-bottom: 7vw;
+    margin-bottom: 2vw;
 }
 
 .invite, .newlyweds, .dress_text, .time, .discussion {
@@ -87,8 +87,8 @@ img.double {
     text-align: center;
 }
 
-.newlyweds, .invite, .dress_text, .time {
-    font-size: 6vw;
+.place, .schedule, .newlyweds, .invite, .dress_text, .time {
+    font-size: 3vw;
 }
 
 ul {
@@ -96,11 +96,11 @@ ul {
 }
 
 .dress {
-    font-size: 6vw;
+    font-size: 5vw;
 }
 
-.txt, .discussion, .place{
-    font-size: 6vw;
+.txt, .discussion {
+    font-size: 3vw;
 }
 
 .reg {
@@ -142,18 +142,18 @@ li {
 }
 
 .datetime {
+    margin-left: 15vw;
     flex: 1;
     text-align: left;
-    font-size: 6vw;
-    margin-left: 9vw;
+    font-size: 4vw;
 }
 
 .event-name {
     flex: 2;
     text-align: center;
-    font-size: 6vw;
-    margin-right: 9vw;
-}z
+    font-size: 4vw;
+    margin-right: 15vw;
+}
 
 /* Стили для кнопки и ссылки в ней */
 .container {
@@ -170,12 +170,12 @@ li {
 }
 
 .btn {
-    width: 40vw;
-    height: 13vw;
+    width: 18vw;
+    height: 6vw;
     cursor: pointer;
     background-color: #87dfc8;
     border: 0;
-    border-radius: 1.2vw;
+    border-radius: 0.5vw;
     outline: none;
     transition: 0.2s ease-in-out;
     font-family: 'Lato', sans-serif;
@@ -190,6 +190,9 @@ li {
     position: absolute;
     top: 0;
     fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
     transition: 0.2s ease-in-out;
 }
 
@@ -199,8 +202,8 @@ li {
 
 .btn span {
     color: white;
-    font-size: 3vw;
-    font-weight: 350;
+    font-size: 1.8vw;
+    font-weight: 100;
 }
 
 /* Импорт шрифтов */
@@ -216,13 +219,15 @@ li {
 }
 
 .money{
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 .accept {
     font-family: 'Rosarium';
+    font-size: 3vw;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     margin-bottom: 4vw;
 }
+    
