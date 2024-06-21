@@ -5,7 +5,7 @@ from flask import current_app
 
 from alembic import context
 
-from src.Guests.model import Guests
+from src.guests.model import Guests
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

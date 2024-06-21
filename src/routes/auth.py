@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, request, redirect, flash, url_for
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import check_password_hash
 from database import db
-from src.Guests.model import Guests
+from src.guests.model import Guests
 from src.user import User
 
 auth = Blueprint('auth', __name__)

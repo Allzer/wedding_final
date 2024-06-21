@@ -1,6 +1,6 @@
 from werkzeug.security import generate_password_hash
 
-from src.Guests.model import Guests
+from src.guests.model import Guests
 from database import db
 
 

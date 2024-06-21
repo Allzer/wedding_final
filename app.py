@@ -3,7 +3,7 @@ from flask_login import LoginManager
 from flask_migrate import Migrate
 from config import SECRET_KEY, DATABASE_URL
 from database import db
-from src.Register.register import reg
+from src.register.register import reg
 from src.routes.auth import auth
 from src.routes.main import main
 from src.profile.profile import profile
