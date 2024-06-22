@@ -14,5 +14,6 @@ def index():
         return render_template('index_desktop.html')
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=False,
+            port=5050)
 

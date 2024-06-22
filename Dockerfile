@@ -6,6 +6,6 @@ RUN pip install -r requirements.txt
 COPY . /app
 WORKDIR /app
 
-EXPOSE 80
+EXPOSE 5050
 
-CMD ["gunicorn", "--bind", "0.0.0.0:80", "app:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5050", "app:app"]
