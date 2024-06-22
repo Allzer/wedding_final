@@ -1,92 +1,91 @@
 @font-face {
-  font-family: 'Rosarium';
-  src: url('../fonts/rosarium.ttf'); /* IE 9 Compatibility Mode */
-}
-
-.reg {
     font-family: 'Rosarium';
-    font-size: 520%;
-    background-color: rgb(189, 228, 213);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 550px; /* Фиксированная высота */
-    padding: 1%;
-    border-radius: 10px;
-    max-width: 450px;
-    margin: auto;
-    top: 50%;
-    transform: translateY(27%);
-}
-
-.container {
-    width: 79%;
-    text-align: center;
-}
-
-.form {
-    margin: auto;
-}
-
-.for-form {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 17px;
-    width: 100%;
-    height: 40px;
-    box-sizing: border-box;
-}
-
-.for-form:focus {
-    border-color: #6aea66;
-    outline: none;
-}
-
-.for-form::placeholder {
-    font-size: 17px;
-    color: #999;
-}
-
-.form-reg {
-    margin: auto;
-    margin-bottom: -20%;
-}
-
-.form-reg input[type="submit"] {
-    background-color: #1ddc4f;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.form-reg input[type="submit"]:hover {
-    background-color: #69ec69; /* Изменяем цвет фона при наведении */
-}
-
-body {
-    background-color: #d9eee8;
-}
-
-
-.zareg{
-    font-size: 35px;
-    color: #4a79f4;
-}
-
-.zapomn{
-    font-family: "Calibri";
-    font-size: 15px;
-    display: block;
-    padding-right: 230px;
-
-}
-
-
+    src: url('../fonts/rosarium.ttf'); /* IE 9 Compatibility Mode */
+  }
+  
+  .reg {
+      font-family: 'Rosarium';
+      font-size: 4.2vw;
+      background-color: rgb(189, 228, 213);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 550px; /* Фиксированная высота */
+      padding: 1vw;
+      border-radius: 1vw;
+      max-width: 23vw;
+      margin: auto;
+      top: 5vw;
+      transform: translateY(9vw);
+  }
+  
+  .container {
+      width: 18vw;
+      text-align: center;
+  }
+  
+  .form {
+      margin: auto;
+  }
+  
+  .for-form {
+      border: 0.1vw solid #ccc;
+      border-radius: 0.3vw;
+      margin-bottom: 1.2vw;
+      width: 100%;
+      height: 2vw;
+      box-sizing: border-box;
+  }
+  
+  .for-form:focus {
+      border-color: #6aea66;
+      outline: none;
+  }
+  
+  .for-form::placeholder {
+      font-size: 1vw;
+      color: #999;
+  }
+  
+  .form-reg {
+      margin: auto;
+      margin-bottom: -1.7vw;
+      text-align: center; /* Центрируем текст внутри контейнера */
+  }
+  
+  .form-reg input[type="submit"] {
+      background-color: #1ddc4f;
+      color: white;
+      padding: 0.5vw 1.8vw;
+      margin-top: 0.2vw;
+      border: none;
+      border-radius: 0.3vw;
+      font-size: 0.9vw;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: inline-block; /* Для корректного отображения */
+      width: 100%; /* Полная ширина */
+      box-sizing: border-box; /* Включает padding и border в ширину */
+  }
+  
+  .form-reg input[type="submit"]:hover {
+      background-color: #69ec69; /* Изменяем цвет фона при наведении */
+  }
+  
+  body {
+      background-color: #d9eee8;
+  }
+  
+  .zareg {
+      font-size: 2.4vw;
+      color: #4a79f4;
+      display: block;
+      margin: auto; /* Центрируем ссылку */
+  }
+  
+  .zapomn {
+      font-family: "Calibri";
+      font-size: 1vw;
+      text-align: left;
+  }
+  
