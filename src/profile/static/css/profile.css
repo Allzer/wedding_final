@@ -1,0 +1,60 @@
+h1{
+    margin-left: 21px;
+    margin-top: 10px;
+}
+
+body {
+    font-family: 'Rosarium';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d9eee8;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 0.5px solid #000000;
+    border-radius: 10px;
+}
+
+.table-row {
+    display: flex;
+    padding: 5px 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+
+}
+
+.table-cell {
+    flex: 1;
+    text-align: left;
+    padding: 8px;
+}
+
+.header {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+
+.profile a {
+    display: block;
+    margin-top: 20px;
+    color: #4a79f4;
+    text-decoration: none;
+}
+
+.profile a:hover {
+    text-decoration: underline;
+}
+
+.logout, .back{
+    margin-left: 20px;
+}
+
+

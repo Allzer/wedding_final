@@ -9,6 +9,7 @@ auth = Blueprint('auth', __name__, template_folder='templates', static_folder='s
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
+    error = None
     if request.method == 'POST':
         p_number = request.form.get('p_number')
         password = request.form.get('psw')
@@ -18,12 +19,11 @@ def login():
             user = User(guest)
             rm = True if request.form.get('remainme') else False
             login_user(user, remember=rm)
-
             return redirect(url_for('main.index'))
         else:
-            flash('Неверный номер телефона или пароль', 'error')
-            return redirect(url_for('auth.login'))
-    return render_template('login.html', title='Авторизация')
+            error = 'Неверный номер телефона или пароль'
+            flash(error, 'error')
+    return render_template('login.html', title='Авторизация', error=error)
 
 @auth.route('/logout')
 @login_required
@@ -31,4 +31,3 @@ def logout():
     logout_user()
     flash('Вы вышли из системы', 'success')
     return redirect(url_for('auth.login'))
-

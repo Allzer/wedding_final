@@ -5,9 +5,7 @@
 {% endblock %}
 
 {% block title %}
-<title>
-    {{title}}
-</title>
+<title>{{title}}</title>
 {% endblock %}
 
 {% block content %}
@@ -15,17 +13,28 @@
     <div class="container">
         <form method="post">
             <span>Авторизация</span>
-            <p class="form"><input class="for-form" type="text" placeholder="Номер телефона" name="p_number" required/></p>
-            <p class="form"><input class="for-form" type="password" placeholder="Пароль" name="psw" id="password" required/></p>
+            <p class="form">
+                <input class="for-form {% if error %}error{% endif %}" type="text" placeholder="Номер телефона" id="phone-mask" name="p_number" required/>
+            </p>
+            <p class="form">
+                <input class="for-form {% if error %}error{% endif %}" type="password" placeholder="Пароль" name="psw" id="password" required/>
+                {% if error %}
+                    <span class="error-message">{{ error }}</span>
+                {% endif %}
+            </p>
             <p class="form-reg"><input type="submit" value="Войти"/></p>
         </form>
-        <dev class="zapomn">
+        <div class="zapomn">
             <span class="form"><input type="checkbox" name="remainme"/>Запомнить меня</span>
-        </dev>
-        <dev class="button_reg">
+        </div>
+        <div class="button_reg">
             <a class="zareg" href="/registrations">Регистрация</a>
-        </dev>
+        </div>
     </div>
 </div>
+{% endblock %}
 
+{% block scripts %}
+    <script src="https://unpkg.com/imask"></script>
+    <script src="{{ url_for('.static', filename='js/script.js') }}"></script>
 {% endblock %}

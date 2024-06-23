@@ -5,25 +5,33 @@
 {% endblock %}
 
 {% block title %}
-<title>
-    {{title}}
-</title>
+<title>{{title}}</title>
 {% endblock %}
 
 {% block content %}
 <div class="reg">
     <div class="container">
-        <form method="post">
+        <form class="form-container" method="post">
             <span>Регистрация</span>
-            <p class="form"><input class="for-form" type="text" placeholder="Фамилия" name="last_name"/></p>
-            <p class="form"><input class="for-form" type="text" placeholder="Имя" name="first_name"/></p>
-            <p class="form"><input class="for-form" type="text" placeholder="Отчество" name="patronymic"/></p>
-            <p class="form"><input class="for-form" type="text" placeholder="VK или Telegram" name="s_n"/></p>
-            <p class="form"><input class="for-form" type="text" placeholder="Номер телефона" name="p_number"/></p>
-            <p class="form"><input class="for-form" type="text" placeholder="Пароль" name="psw"/></p>
-            <p class="form"><input class="for-form" type="text" placeholder="Подтвердите Пароль" name="ag_psw"/></p>
+            <p class="form"><input class="for-form {% if error %}error{% endif %}" type="text" placeholder="Фамилия" name="last_name"/></p>
+            <p class="form"><input class="for-form {% if error %}error{% endif %}" type="text" placeholder="Имя" name="first_name"/></p>
+            <p class="form"><input class="for-form {% if error %}error{% endif %}" type="text" placeholder="Отчество" name="patronymic"/></p>
+            <p class="form"><input class="for-form {% if error %}error{% endif %}" type="text" placeholder="VK или Telegram" name="s_n"/></p>
+            <p class="form"><input class="for-form {% if error %}error{% endif %}" type="text" placeholder="Номер телефона" id="phone-mask" name="p_number"/></p>
+            <p class="form"><input class="for-form {% if error %}error{% endif %}" type="text" placeholder="Пароль" name="psw"/></p>
+            <p class="form"><input class="for-form {% if error %}error{% endif %}" type="text" placeholder="Подтвердите Пароль" name="ag_psw"/></p>
+            {% if error %}
+                <span class="error-message">{{ error }}</span>
+            {% endif %}
             <p class="form-reg" ><input type="submit" value="Регистрация"/></p>
         </form>
+        
+    </div>
     </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://unpkg.com/imask"></script>
+    <script src="{{ url_for('.static', filename='js/script.js') }}"></script>
 {% endblock %}

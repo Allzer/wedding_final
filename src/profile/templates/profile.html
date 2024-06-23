@@ -1,0 +1,35 @@
+{% extends 'base.jinja2' %}
+
+{% block head %}
+    <link type="text/css" href="{{ url_for('.static', filename='css/profile.css')}}" rel="stylesheet" />
+{% endblock %}
+
+{% block title %}
+    <title>{{ title }}</title>
+{% endblock %}
+
+{% block content %}
+    <div class="profile">
+        <h1>Профиль</h1>
+        <a class="back" href="{{ url_for('main.index') }}">Вернуться на главную</a>
+        <div class="table-container">
+            <div class="table-row header">
+                <div class="table-cell">Фамилия</div>
+                <div class="table-cell">Имя</div>
+                <div class="table-cell">Отчество</div>
+                <div class="table-cell">Telegram</div>
+                <div class="table-cell">Телефон</div>
+            </div>
+            {% for guest in guests %}
+                <div class="table-row">
+                    <div class="table-cell">{{ guest.last_name }}</div>
+                    <div class="table-cell">{{ guest.first_name }}</div>
+                    <div class="table-cell">{{ guest.patronymic }}</div>
+                    <div class="table-cell">{{ guest.s_n }}</div>
+                    <div class="table-cell">{{ guest.p_number }}</div>
+                </div>
+            {% endfor %}
+        </div>
+        <a class="logout" href="{{ url_for('auth.logout') }}">Выйти из профиля</a>
+    </div>
+{% endblock %}

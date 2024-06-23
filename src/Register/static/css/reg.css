@@ -10,14 +10,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 550px; /* Фиксированная высота */
+    height: 650px; /* Фиксированная высота */
     padding: 1%;
     border-radius: 10px;
     max-width: 450px;
     margin: auto;
 
     top: 50%;
-    transform: translateY(27%);
+    transform: translateY(20%);
 }
 
 .container {
@@ -50,7 +50,7 @@
 
 .form-reg{
     margin: auto;
-    margin-bottom: -20%;
+    margin-bottom: -10%;
 
 }
 
@@ -68,10 +68,28 @@
     transition: background-color 0.3s ease;
 }
 
+.form-container{
+    margin-bottom: 0;
+    padding-bottom: 48px;
+}
+
 .form-reg input[type="submit"]:hover {
     background-color: #69ec69; /* Изменяем цвет фона при наведении */
 }
 
 body {
     background-color: #d9eee8;
+}
+
+.error {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 1.2vw;
+    display: block;
+    /* margin-top: 1vw; */
+    margin-bottom: 1vw;
+    text-align: left;
 }

@@ -1,8 +1,9 @@
 from werkzeug.security import generate_password_hash
 
-from src.guests.model import Guests
+from src.guests.model import Guests, Admin
 from database import db
 
+admins = ["+7(961)645-88-10"]
 
 def update(form):
     g = Guests(
@@ -15,5 +16,24 @@ def update(form):
     )
 
     db.session.add(g)
+    db.session.commit()
+
+    print("Телефон из формы:", form['p_number'])
+    print(type(form['p_number']))
+    print(admins)
+
+    # Проверка номера телефона и создание записи в таблице Admin
+    if form['p_number'] in admins:
+        admin = Admin(
+            last_name=form["last_name"],
+            first_name=form["first_name"],
+            p_number=form['p_number'],
+            is_admin=True
+        )
+        db.session.add(admin)
+        print("Админ добавлен:", form['p_number'])
+    else:
+        print("Не админ:", form['p_number'])
+    
     db.session.commit()
     print("Изменения внесены")

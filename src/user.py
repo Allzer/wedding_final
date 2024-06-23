@@ -1,5 +1,5 @@
 from flask_login import UserMixin
-from src.guests.model import Guests
+from src.guests.model import Guests, Admin
 from database import db
 
 class User(UserMixin):
@@ -9,6 +9,7 @@ class User(UserMixin):
         self.id = guest.id
         self.p_number = guest.p_number
         self.password = guest.password
+        self.admin = guest.admin is not None  # Проверяем наличие записи в Admin
         self.active = True
 
     @property
