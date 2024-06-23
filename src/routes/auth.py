@@ -1,11 +1,11 @@
 from flask import Blueprint, render_template, request, redirect, flash, url_for
-from flask_login import login_user, login_required, logout_user, current_user
+from flask_login import login_user, login_required, logout_user
 from werkzeug.security import check_password_hash
 from database import db
 from src.guests.model import Guests
 from src.user import User
 
-auth = Blueprint('auth', __name__)
+auth = Blueprint('auth', __name__, template_folder='templates', static_folder='static')
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
@@ -23,7 +23,7 @@ def login():
         else:
             flash('Неверный номер телефона или пароль', 'error')
             return redirect(url_for('auth.login'))
-    return render_template("login.html", title='Авторизация')
+    return render_template('login.html', title='Авторизация')
 
 @auth.route('/logout')
 @login_required

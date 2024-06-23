@@ -16,7 +16,6 @@ def index():
             check_password_hash(hash, form['ag_psw'])
             if check_password_hash(hash, form['ag_psw']):
                 update(form)
-                flash('Вы успешно зарегистрировались')
                 return redirect('/auth/login', code=302, Response=None)
             else:
                 flash('Пароли не совпадают')
