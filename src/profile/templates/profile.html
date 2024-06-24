@@ -22,13 +22,13 @@
                 <div class="table-cell">Телефон</div>      
             </div>
             
-            {% for guest,accept in guests %}
+            {% for alls in all %}
                 <div class="table-row">
-                    <div class="table-cell">{{ guest.last_name }}</div>
-                    <div class="table-cell">{{ guest.first_name }}</div>
-                    <div class="table-cell">{{ guest.patronymic }}</div>
-                    <div class="table-cell">{{ guest.s_n }}</div>
-                    <div class="table-cell">{{ guest.p_number }}</div>
+                    <div class="table-cell">{{ alls.last_name }}</div>
+                    <div class="table-cell">{{ alls.first_name }}</div>
+                    <div class="table-cell">{{ alls.patronymic }}</div>
+                    <div class="table-cell">{{ alls.s_n }}</div>
+                    <div class="table-cell">{{ alls.p_number }}</div>
                 </div>
             {% endfor %}
         </div>

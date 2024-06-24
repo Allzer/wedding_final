@@ -17,5 +17,6 @@ def prof():
 
     
     results = db.session.query(Guests, Accept).join(Accept, Guests.id == Accept.guest_id).all()
+    all = db.session.query(Guests).all()
 
-    return render_template('profile.html', title='Профиль', guests=results)
+    return render_template('profile.html', title='Профиль', guests=results, all=all)
