@@ -12,6 +12,23 @@ body {
     width: 0;
 }
 
+.admin-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 10px;
+    background-color: #87dfc8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5vw;
+    border: 1px solid #87dfc8;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.admin-btn:hover {
+    background-color: #81b4ef;
+    border-color: #81b4ef;
+}
+
 .all {
     display: flex;
     flex-direction: column;

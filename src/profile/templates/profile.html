@@ -19,14 +19,27 @@
                 <div class="table-cell">Отчество</div>
                 <div class="table-cell">Telegram</div>
                 <div class="table-cell">Телефон</div>
+                <div class="table-cell">Меню</div>
+                <div class="table-cell">Музыка</div>
+                <div class="table-cell">История</div>
+                <div class="table-cell">Факты</div>
+                <div class="table-cell">Сюрприз</div>
+                <div class="table-cell">Вопросы</div>
             </div>
-            {% for guest in guests %}
+            
+            {% for guest,accept in guests %}
                 <div class="table-row">
                     <div class="table-cell">{{ guest.last_name }}</div>
                     <div class="table-cell">{{ guest.first_name }}</div>
                     <div class="table-cell">{{ guest.patronymic }}</div>
                     <div class="table-cell">{{ guest.s_n }}</div>
                     <div class="table-cell">{{ guest.p_number }}</div>
+                    <div class="table-cell">{{ accept.menu }}</div>
+                    <div class="table-cell">{{ accept.music }}</div>
+                    <div class="table-cell">{{ accept.hist }}</div>
+                    <div class="table-cell">{{ accept.fact }}</div>
+                    <div class="table-cell">{{ accept.surprise }}</div>
+                    <div class="table-cell">{{ accept.question }}</div>
                 </div>
             {% endfor %}
         </div>

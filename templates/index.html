@@ -12,6 +12,13 @@
     <div>
         {% block content %}
         {{ super() }}
+
+        <div class="admin" >
+            {% if current_user.is_authenticated and current_user.admin %}
+                <a href="{{ url_for('profile.prof') }}">Admin</a>
+            {% endif %} 
+        </div>
+         
         <div class="all">
             <div class="image">
                 <img src="static/img/ramka_2.png" alt="Frame" class="main-image">

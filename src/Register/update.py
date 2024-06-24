@@ -18,11 +18,6 @@ def update(form):
     db.session.add(g)
     db.session.commit()
 
-    print("Телефон из формы:", form['p_number'])
-    print(type(form['p_number']))
-    print(admins)
-
-    # Проверка номера телефона и создание записи в таблице Admin
     if form['p_number'] in admins:
         admin = Admin(
             last_name=form["last_name"],

@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="static/css/form.css">
+{% endblock %}
+
+{% block title %}
+    <title>{{ title }}</title>
+{% endblock %}
+
+<body>
+    <div >
+        {% block content %}
+        {{ super() }}
+        <form method="post">
+            <div class="all">
+                <div class="container">
+                    <div>
+                        <h1>Особенности вашего меню (веган, наличие аллергии)</h1>
+                        <p><input type="text" placeholder="Мой ответ" name="menu"></p>
+                        <hr>
+                    </div>
+                </div>            
+            </div>
+            <div class="all">
+                <div class="container">
+                    <div>
+                        <h1>Любимая песня, которая обязательно должна быть на свадьбе</h1>
+                        <p><input type="text" placeholder="Мой ответ" name="music"></p>
+                        <hr>
+                    </div>
+                </div>            
+            </div>
+            <div class="all">
+                <div class="container">
+                    <div>
+                        <h1>Памятная история для вас, связанная с молодожёнами</h1>
+                        <p><input type="text" placeholder="Мой ответ" name="hist"></p>
+                        <hr>
+                    </div>
+                </div>            
+            </div>
+            <div class="all">
+                <div class="container">
+                    <div>
+                        <h1>Три интересных факта о себе</h1>
+                        <p><input type="text" placeholder="Мой ответ" name="fact"></p>
+                        <hr>
+                    </div>
+                </div>            
+            </div>
+            <div class="all">
+                <div class="container">
+                    <div>
+                        <h1>Планируете ли вы сделать сюрприз для молодожёнов.
+                            Если да, то вам пришлют контакты ведущего</h1>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="surprise" value="yes">
+                                Да
+                            </label>
+                            <label>
+                                <input type="radio" name="surprise" value="no">
+                                Нет
+                            </label>
+                        </div>
+                        <hr>
+                    </div>
+                </div>            
+            </div>
+            <div class="all">
+                <div class="container">
+                    <div>
+                        <h1>Остались ли какие-нибудь вопросы по мероприятию</h1>
+                        <p><input type="text" placeholder="Мой ответ" name="question"></p>
+                        <hr>
+                    </div>
+                </div>            
+            </div>
+            <p class="form-reg" ><input type="submit" value="Подтвердить"/></p>
+        </form>
+        {% endblock %}
+    </div>
+</body>
