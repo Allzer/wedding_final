@@ -9,9 +9,31 @@
 {% endblock %}
 
 {% block content %}
+    <h1>Профиль <a class="back" href="{{ url_for('main.index') }}">Вернуться на главную</a></h1>
+    
     <div class="profile">
-        <h1>Профиль</h1>
-        <a class="back" href="{{ url_for('main.index') }}">Вернуться на главную</a>
+        <h2>Пользователи</h2>
+        <div class="table-container">
+            <div class="table-row header">
+                <div class="table-cell">Фамилия</div>
+                <div class="table-cell">Имя</div>
+                <div class="table-cell">Отчество</div>
+                <div class="table-cell">Telegram</div>
+                <div class="table-cell">Телефон</div>      
+            </div>
+            
+            {% for guest,accept in guests %}
+                <div class="table-row">
+                    <div class="table-cell">{{ guest.last_name }}</div>
+                    <div class="table-cell">{{ guest.first_name }}</div>
+                    <div class="table-cell">{{ guest.patronymic }}</div>
+                    <div class="table-cell">{{ guest.s_n }}</div>
+                    <div class="table-cell">{{ guest.p_number }}</div>
+                </div>
+            {% endfor %}
+        </div>
+        
+        <h2>Полная регистрация</h2>
         <div class="table-container">
             <div class="table-row header">
                 <div class="table-cell">Фамилия</div>
@@ -43,6 +65,8 @@
                 </div>
             {% endfor %}
         </div>
+        
+
         <a class="logout" href="{{ url_for('auth.logout') }}">Выйти из профиля</a>
     </div>
 {% endblock %}
