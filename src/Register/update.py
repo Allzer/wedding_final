@@ -3,7 +3,7 @@ from werkzeug.security import generate_password_hash
 from src.guests.model import Guests, Admin
 from database import db
 
-admins = ["+7(961)645-88-10"]
+admins = ["+7(111)111-11-11"]
 
 def update(form):
     g = Guests(
