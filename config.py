@@ -10,4 +10,4 @@ DB_USER = os.environ.get('DB_USER')
 DB_PASS = os.environ.get('DB_PASS')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DATABASE_URL = "postgresql://postgres:nehbcn007@localhost:5432/postgres"
+DATABASE_URL = "postgresql://postgres:Nehbcn007@localhost:5432/postgres"

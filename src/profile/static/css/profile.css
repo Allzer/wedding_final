@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Rosarium';
+    src: url('../fonts/rosarium.ttf'); /* IE 9 Compatibility Mode */
+}
+
 h1,h2{
     margin-left: 21px;
     margin-top: 10px;
