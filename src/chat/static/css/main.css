@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Rosarium';
+    src: url('../fonts/rosarium.ttf'); /* IE 9 Compatibility Mode */
+}
+
+body {
+    font-family: 'Rosarium';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d9eee8;
+}

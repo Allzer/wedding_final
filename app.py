@@ -6,6 +6,7 @@ from database import db
 from src.register.register import reg
 from src.routes.auth import auth
 from src.routes.main import main
+from src.chat.chat import chat
 from src.profile.profile import profile
 from src.user import load_user
 
@@ -16,6 +17,7 @@ app.register_blueprint(reg, url_prefix='/registrations')
 app.register_blueprint(auth, url_prefix='/auth')
 app.register_blueprint(main)
 app.register_blueprint(profile, url_prefix='/profile')
+app.register_blueprint(chat, url_prefix='/chat')
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
