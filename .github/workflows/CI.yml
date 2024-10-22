@@ -11,6 +11,4 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: pip install -r requirements.txt          
-        
-      
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
